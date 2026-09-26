@@ -1808,3 +1808,14 @@ a[x-apple-data-detectors],
     height:420px;
   }
 }
+
+
+/* Give the desktop header comfortable side margins. */
+@media(min-width:768px){
+  .site-header .header-inner{
+    width:calc(100% - 96px);
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
