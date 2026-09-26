@@ -1762,3 +1762,14 @@ a[x-apple-data-detectors],
     grid-template-columns:1fr;
   }
 }
+
+
+/* Tighten gap between Proposals intro and planning status strip */
+.page-hero + .proposal-current-position{
+  margin-top:-18px;
+}
+@media(max-width:767px){
+  .page-hero + .proposal-current-position{
+    margin-top:-12px;
+  }
+}
