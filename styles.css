@@ -1649,3 +1649,116 @@ a.contact-card:focus{
     width:100%;
   }
 }
+
+
+/* Integrated current position on Proposals page */
+.proposal-current-position{
+  background:#1e5a4a;
+  color:#fff;
+}
+.proposal-current-position-inner{
+  min-height:96px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;
+  align-items:center;
+  gap:32px;
+  padding-top:22px;
+  padding-bottom:22px;
+}
+.proposal-current-position strong{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+  font-size:1.9rem;
+  line-height:1;
+  text-transform:uppercase;
+}
+.proposal-status-label{
+  display:block;
+  color:#acd6bb;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.proposal-portal-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 18px;
+  border:1px solid #fff;
+  color:#fff;
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+  font-size:1.15rem;
+  font-weight:700;
+  line-height:20px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.proposal-portal-link:hover,
+.proposal-portal-link:focus{
+  background:#febd11;
+  border-color:#febd11;
+  color:#231f20;
+}
+.proposal-status-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:24px;
+}
+.proposal-status-grid-single{
+  grid-template-columns:minmax(0,1fr);
+  max-width:520px;
+}
+.proposal-status-item{
+  min-width:0;
+  padding:18px 20px;
+  border-left:4px solid #1e5a4a;
+  background:#edece5;
+}
+.proposal-status-item strong{
+  display:block;
+  margin-bottom:6px;
+  color:#1e5a4a;
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+  font-size:1.35rem;
+  line-height:1;
+  text-transform:uppercase;
+}
+.proposal-status-item span{
+  display:block;
+  color:#231f20;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.82rem;
+  line-height:1.45;
+}
+
+/* Prevent iOS data detectors from restyling number-like references. */
+a[x-apple-data-detectors],
+.application-ref a[x-apple-data-detectors]{
+  color:inherit !important;
+  text-decoration:none !important;
+  font:inherit !important;
+}
+
+@media(max-width:767px){
+  .proposal-current-position-inner{
+    grid-template-columns:1fr;
+    gap:16px;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  .proposal-current-position strong{
+    font-size:1.7rem;
+  }
+  .proposal-portal-link{
+    width:100%;
+  }
+  .proposal-status-grid{
+    grid-template-columns:1fr;
+  }
+}
