@@ -144,3 +144,78 @@ a{color:inherit}
 @media(max-width:460px){
   .hero h1{font-size:4.3rem}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.22)}.stat:last-child{border-bottom:0}
 }
+
+
+/* Mobile refinements */
+body{overflow-x:hidden}
+@media(max-width:760px){
+  .site-header{border-bottom-width:3px}
+  .header-inner{gap:14px}
+  .site-title{font-size:1.28rem;letter-spacing:.025em;white-space:nowrap}
+  .menu-btn{min-height:42px;min-width:66px;padding:9px 12px}
+  .main-nav{box-shadow:0 16px 28px rgba(35,31,32,.24);padding:10px 18px 18px}
+  .main-nav a{font-size:.9rem;padding:13px 4px}
+  .hero{min-height:500px;align-items:flex-end}
+  .hero img{object-position:58% center}
+  .hero-content{padding:72px 0 42px;max-width:100%}
+  .hero-kicker{font-size:.98rem;line-height:1.35;max-width:290px}
+  .hero h1{font-size:clamp(4rem,19vw,5.3rem);line-height:.9}
+  .hero p{font-size:.96rem;line-height:1.55;margin-top:18px;max-width:100%}
+  .page-hero{padding:54px 0 44px}
+  .page-hero h1{font-size:clamp(3rem,14vw,4.3rem);line-height:.92}
+  .page-hero p{font-size:.96rem;line-height:1.55;margin-top:16px}
+  .section{padding:48px 0}
+  .two-col,.proposal-section,.original-update .container{gap:28px}
+  .text-block h2,.section-heading{font-size:clamp(2.5rem,12vw,3.55rem);margin-bottom:17px}
+  .text-block h3{font-size:1.8rem}
+  .lead{font-size:1.02rem}
+  .text-block p,.proposal-copy p{font-size:.95rem}
+  .update-box{padding:26px 22px 24px;border-top-width:6px}
+  .update-box h3{font-size:2rem}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 16px;min-height:122px}
+  .stat strong{font-size:2.55rem}
+  .stat span{font-size:.79rem;line-height:1.35}
+  .original-update{padding:42px 0}
+  .original-update h2{font-size:2.65rem}
+  .proposal-section{padding:44px 0}
+  .proposal-copy h2{font-size:2.45rem}
+  .image-frame{padding:7px}
+  .position-note{padding:13px 14px;font-size:.86rem}
+  .issue-list{margin-top:24px}
+  .issue-row{padding:20px 0;gap:10px}
+  .issue-row h3{font-size:1.65rem}
+  .issue-row p{font-size:.9rem}
+  .issue-row .result{max-width:100%;justify-self:start;font-size:.68rem}
+  .faq-group{margin-bottom:36px}
+  .faq-group h2{font-size:2.25rem}
+  .faq-q{font-size:.92rem;line-height:1.35;padding:18px 48px 18px 16px;min-height:56px}
+  .faq-q:after{right:16px;top:12px}
+  .faq-a{padding:0 16px 20px;font-size:.9rem}
+  .about-logo{min-height:190px;padding:30px}
+  .about-logo img{max-width:220px}
+  .btn{width:100%;text-align:center;padding:13px 14px}
+  .footer{padding:36px 0 22px}
+  .footer-grid{gap:24px}
+  .footer-bottom{gap:7px;margin-top:24px}
+}
+@media(max-width:520px){
+  .container{width:calc(100% - 28px)}
+  .site-title{font-size:1.18rem}
+  .hero{min-height:470px}
+  .hero h1{font-size:clamp(3.85rem,20vw,4.75rem)}
+  .stats{grid-template-columns:1fr}
+  .stat{min-height:auto;border-right:0;border-bottom:1px solid rgba(255,255,255,.22);padding:20px 18px}
+  .stat:last-child{border-bottom:0}
+  .stat strong{font-size:2.7rem}
+  .stat span{font-size:.82rem}
+  .page-hero h1{font-size:clamp(2.8rem,14vw,3.7rem)}
+  .original-update h2{font-size:2.45rem}
+  .proposal-copy h2{font-size:2.3rem}
+}
+@media(max-width:370px){
+  .site-title{font-size:1.05rem}
+  .menu-btn{min-width:60px;font-size:.76rem}
+  .hero h1{font-size:3.65rem}
+  .page-hero h1{font-size:2.65rem}
+}
