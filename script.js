@@ -1,3 +1,36 @@
+/* Preserve the reader's position when the same page is refreshed after an update. */
+(() => {
+  const pageKey = `j22_scroll_${location.pathname}${location.search}`;
+  const navigation = performance.getEntriesByType?.('navigation')?.[0];
+  const isReload = navigation?.type === 'reload';
+
+  let saveTimer;
+  const savePosition = () => {
+    sessionStorage.setItem(pageKey, String(window.scrollY || window.pageYOffset || 0));
+  };
+
+  window.addEventListener('scroll', () => {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(savePosition, 80);
+  }, { passive: true });
+
+  window.addEventListener('pagehide', savePosition);
+  window.addEventListener('beforeunload', savePosition);
+
+  if (isReload) {
+    const saved = Number(sessionStorage.getItem(pageKey));
+    if (Number.isFinite(saved) && saved > 0) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      const restore = () => window.scrollTo({ top: saved, left: 0, behavior: 'auto' });
+      requestAnimationFrame(restore);
+      window.addEventListener('load', () => {
+        restore();
+        setTimeout(restore, 120);
+      }, { once: true });
+    }
+  }
+})();
+
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.main-nav');
 
