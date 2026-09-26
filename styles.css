@@ -223,3 +223,179 @@ a{color:inherit}
   .hero h1{font-size:4.1rem}
   .intro-band p{font-size:1.8rem}
 }
+
+
+/* Mobile fit-and-overflow hardening */
+.site-title,
+.site-title span,
+.header-inner,
+.main-nav,
+.hero-content,
+.intro-band-inner,
+.welcome-copy,
+.about-copy,
+.prose,
+.proposal-block,
+.update-intro > *,
+.media-split > *,
+.about-grid > *,
+.footer-main > *{
+  min-width:0;
+}
+.footer-contact,
+.current-note,
+.status-panel,
+.faq-a,
+.faq-q,
+.prose,
+.welcome-copy{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+@media(max-width:760px){
+  .container{width:calc(100% - 32px)}
+  .header-inner{height:86px;gap:10px}
+  .site-title{
+    flex:1 1 auto;
+    gap:10px;
+    font-size:clamp(.98rem,4.25vw,1.22rem);
+    letter-spacing:0;
+    white-space:nowrap;
+    overflow:hidden;
+  }
+  .site-title::before{
+    width:clamp(104px,30vw,126px);
+    height:42px;
+    flex:0 0 auto;
+  }
+  .site-title span{
+    display:block;
+    overflow:hidden;
+    text-overflow:clip;
+  }
+  .menu-btn{
+    width:40px;
+    height:38px;
+    flex:0 0 40px;
+    padding:3px;
+  }
+  .menu-btn span{height:3px;margin:5px 1px}
+  .main-nav{top:86px;padding-left:16px;padding-right:16px;width:100%}
+
+  .original-hero{min-height:520px}
+  .hero-content{width:100%;padding-bottom:58px}
+  .hero-kicker{
+    max-width:100%;
+    font-size:clamp(1.12rem,5.4vw,1.48rem);
+    line-height:1.04;
+  }
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(3.7rem,18vw,4.85rem);
+    line-height:.88;
+  }
+
+  .intro-band-inner{min-height:auto;padding:44px 0 36px}
+  .intro-band p{
+    max-width:100%;
+    font-size:clamp(1.62rem,7.4vw,2.05rem);
+    line-height:1.06;
+    overflow-wrap:break-word;
+  }
+  .down-arrow{margin-top:34px}
+
+  .welcome-section{padding:48px 0 56px}
+  .welcome-section h2{
+    max-width:100%;
+    font-size:clamp(3rem,15vw,3.8rem);
+    line-height:.95;
+  }
+  .welcome-copy{width:100%;font-size:.92rem}
+  .home-benefits{width:100%;max-width:100%;margin-left:0;margin-right:0}
+  .benefit-item{width:100%;padding:20px}
+  .benefit-item strong{
+    max-width:100%;
+    font-size:clamp(2.7rem,14vw,3.35rem);
+    overflow-wrap:anywhere;
+  }
+  .current-update-link{max-width:100%;overflow-wrap:anywhere}
+
+  .about-section h2,
+  .content-title,
+  .section-title{
+    max-width:100%;
+    font-size:clamp(2.7rem,13vw,3.45rem);
+    overflow-wrap:break-word;
+  }
+  .about-logo-panel{width:100%;padding:28px}
+  .about-logo-panel img{width:min(260px,85%);max-width:100%}
+
+  .page-hero h1{
+    max-width:100%;
+    font-size:clamp(2.8rem,13vw,4rem);
+    line-height:.95;
+    overflow-wrap:break-word;
+  }
+  .page-hero p{max-width:100%;overflow-wrap:break-word}
+
+  .media-split,
+  .about-grid,
+  .update-intro{width:100%;max-width:100%}
+  .image-frame{width:100%;max-width:100%;overflow:hidden}
+  .image-frame img{width:100%;height:auto}
+  .proposal-block h2,
+  .faq-group h2{
+    max-width:100%;
+    font-size:clamp(2.15rem,10.5vw,2.65rem);
+    overflow-wrap:break-word;
+  }
+  .status-panel{width:100%;padding:24px 20px}
+  .status-panel strong{font-size:clamp(1.9rem,9vw,2.35rem);overflow-wrap:anywhere}
+  .issue-row{width:100%;max-width:100%}
+  .issue-row .result{max-width:100%;overflow-wrap:anywhere}
+  .faq-q{max-width:100%;padding-right:42px}
+  .faq-a{max-width:100%;padding-right:0}
+
+  .footer{padding-left:0;padding-right:0}
+  .footer-main{width:calc(100% - 32px)}
+  .footer-brand{
+    width:100%;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:1.05rem;
+  }
+  .footer-brand img{width:126px;max-width:42vw}
+  .footer-nav{width:100%}
+  .footer-contact{width:100%;max-width:100%;font-size:.76rem}
+  .footer-bottom{width:calc(100% - 32px)}
+}
+
+@media(max-width:420px){
+  .container{width:calc(100% - 28px)}
+  .header-inner{height:82px;gap:8px}
+  .site-title{
+    gap:8px;
+    font-size:clamp(.88rem,4vw,1rem);
+  }
+  .site-title::before{width:104px;height:38px}
+  .menu-btn{width:36px;height:36px;flex-basis:36px}
+  .main-nav{top:82px}
+  .original-hero{min-height:500px}
+  .hero-content{padding-bottom:52px}
+  .hero h1{font-size:clamp(3.45rem,17vw,4.15rem)}
+  .hero-kicker{font-size:clamp(1rem,5.1vw,1.2rem)}
+  .intro-band p{font-size:clamp(1.48rem,7vw,1.8rem)}
+  .welcome-section h2{font-size:clamp(2.8rem,14vw,3.4rem)}
+  .page-hero h1{font-size:clamp(2.55rem,12vw,3.45rem)}
+  .proposal-block h2,.faq-group h2{font-size:clamp(2rem,10vw,2.4rem)}
+  .footer-main,.footer-bottom{width:calc(100% - 28px)}
+}
+
+@media(max-width:350px){
+  .site-title::before{width:92px}
+  .site-title{font-size:.82rem}
+  .menu-btn{width:34px;flex-basis:34px}
+  .hero h1{font-size:3.25rem}
+  .intro-band p{font-size:1.4rem}
+}
