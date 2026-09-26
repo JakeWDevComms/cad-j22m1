@@ -20,7 +20,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--text);font-family:"Montserrat",Arial,Helvetica,sans-serif;line-height:1.62;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
-.container{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.container{width:min(var(--max),calc(100% - 96px));margin:0 auto}
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:100;background:#000;color:#fff}
@@ -809,7 +809,7 @@ body{
 .footer{background:var(--brand-black)}
 
 .source-shell{
-  width:min(1140px,calc(100% - 80px));
+  width:min(1140px,calc(100% - 96px));
   margin:0 auto;
 }
 .source-page-head{
@@ -1082,7 +1082,7 @@ a.contact-card:focus{
 }
 
 @media(max-width:1024px){
-  .source-shell{width:calc(100% - 70px)}
+  .source-shell{width:calc(100% - 96px)}
   .source-page-head{padding-top:35px}
   .source-page-head-inner h1{
     padding-left:1rem;
@@ -1228,7 +1228,7 @@ a.contact-card:focus{
 
 /* Site page restructure – source-site sizing with Caddick brand colours */
 .site-source-shell{
-  width:min(1140px,calc(100% - 80px));
+  width:min(1140px,calc(100% - 96px));
   margin:0 auto;
 }
 .site-location-section{
@@ -1405,7 +1405,7 @@ a.contact-card:focus{
 
 @media(max-width:1024px){
   .site-source-shell{
-    width:calc(100% - 70px);
+    width:calc(100% - 96px);
   }
   .site-location-section{
     padding:35px 0 28px;
