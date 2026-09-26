@@ -1,174 +1,225 @@
 :root{
-  --black:#231f20;
-  --green:#1e5a4a;
+  --black:#000000;
+  --brand-black:#231f20;
+  --green:#2f584a;
+  --brand-green:#1e5a4a;
   --pale:#acd6bb;
-  --warm:#edece5;
   --white:#ffffff;
+  --offwhite:#f7f7f5;
+  --warm:#edece5;
   --text:#231f20;
-  --muted:#666062;
-  --line:#d8d4cd;
+  --muted:#686365;
+  --line:#dad7d1;
   --max:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--text);font-family:"Century Gothic",Arial,Helvetica,sans-serif;line-height:1.65;overflow-x:hidden}
+body{margin:0;background:#fff;color:var(--text);font-family:"Century Gothic","CenturyGothic",Arial,Helvetica,sans-serif;line-height:1.62;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
 .container{width:min(var(--max),calc(100% - 48px));margin:0 auto}
 
-/* Header — deliberately mirrors the original site's simple title + nav treatment */
-.site-header{background:var(--black);color:#fff;position:sticky;top:0;z-index:50}
-.header-inner{height:86px;display:flex;align-items:center;justify-content:space-between;gap:42px}
-.site-title{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:1.86rem;line-height:1;text-transform:uppercase;text-decoration:none;font-weight:700;letter-spacing:.02em}
-.site-title span{color:var(--pale)}
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:#000;color:#fff}
+.header-inner{height:96px;display:flex;align-items:center;justify-content:space-between;gap:34px}
+.site-title{display:flex;align-items:center;gap:28px;text-decoration:none;color:#fff;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:1.7rem;line-height:1;text-transform:uppercase;font-weight:700;letter-spacing:.015em;white-space:nowrap}
+.site-title::before{content:"";display:block;width:190px;height:54px;background:url("assets/caddick-logo-white.png") left center/contain no-repeat;flex:none}
+.site-title span{color:#fff}
 .main-nav{display:flex;align-items:center;gap:34px}
-.main-nav a{font-size:.84rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:33px 0 28px;border-bottom:5px solid transparent}
+.main-nav a{text-decoration:none;color:#fff;text-transform:uppercase;font-size:.82rem;font-weight:700;letter-spacing:.055em;padding:38px 0 33px;border-bottom:4px solid transparent}
 .main-nav a:hover,.main-nav a.active{color:var(--pale);border-bottom-color:var(--pale)}
-.menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;text-transform:uppercase;font:700 .8rem "Century Gothic",Arial,sans-serif;padding:10px 12px}
+.menu-btn{display:none;width:46px;height:42px;padding:4px;border:0;background:transparent;cursor:pointer}
+.menu-btn span{display:block;height:4px;background:#fff;border-radius:5px;margin:6px 1px}
 
 /* Homepage hero */
-.hero{position:relative;min-height:610px;display:flex;align-items:flex-end;color:#fff;background:var(--black);overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,31,32,.88) 0%,rgba(35,31,32,.68) 45%,rgba(35,31,32,.18) 76%),linear-gradient(0deg,rgba(35,31,32,.58),transparent 50%)}
-.hero-content{position:relative;z-index:2;padding:96px 0 74px;max-width:690px}
-.hero-kicker{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.55rem;line-height:1.05;color:var(--pale);margin-bottom:8px}
-.hero h1,.page-hero h1,.section-title,.content-title,.faq-group h2{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:0;line-height:.93}
-.hero h1{font-size:clamp(5.2rem,10vw,9rem);margin:0}
-.hero p{font-size:1.02rem;max-width:640px;margin:24px 0 0}
+.hero{position:relative;overflow:hidden}
+.original-hero{min-height:660px;background:linear-gradient(#ececec,#a7a7a7);display:flex;align-items:flex-end;color:#fff}
+.original-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.82)}
+.original-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.14) 43%,rgba(0,0,0,.47) 100%)}
+.hero-content{position:relative;z-index:2;padding:90px 0 76px}
+.hero-kicker{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:2.05rem;line-height:1;color:#fff;letter-spacing:.008em;margin-bottom:18px}
+.hero h1{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(6rem,10vw,9.6rem);line-height:.82;letter-spacing:0;margin:0;color:#fff}
 
-/* Internal page title treatment */
-.page-hero{background:var(--green);color:#fff;padding:66px 0 58px}
-.page-hero h1{font-size:clamp(4rem,7vw,6.9rem);margin:0}
-.page-hero p{font-size:1.03rem;max-width:780px;margin:18px 0 0;color:rgba(255,255,255,.92)}
+/* The green statement band visible on the original */
+.intro-band{background:var(--green);color:#fff}
+.intro-band-inner{min-height:395px;padding:68px 0 46px;display:flex;flex-direction:column;justify-content:space-between}
+.intro-band p{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(2rem,3.2vw,3.25rem);line-height:1.03;letter-spacing:.006em;margin:0;max-width:1060px}
+.down-arrow{display:block;width:31px;height:31px;border-right:5px solid #fff;border-bottom:5px solid #fff;transform:rotate(45deg);margin:30px auto 4px}
 
-/* Main content */
+/* Welcome */
+.welcome-section{background:#fff;padding:68px 0 82px;text-align:center}
+.welcome-section h2,.about-section h2,.page-hero h1,.proposal-block h2,.faq-group h2,.section-title,.content-title{
+  font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;
+  text-transform:uppercase;font-weight:700;letter-spacing:0;line-height:.94
+}
+.welcome-section h2{font-size:4.6rem;color:var(--green);margin:0 0 38px}
+.welcome-copy{max-width:990px;margin:0 auto;text-align:left;font-size:1.02rem}
+.welcome-copy p{margin:0 0 20px}
+.home-benefits{max-width:930px;margin:54px auto 24px;background:var(--green);display:grid;grid-template-columns:repeat(2,1fr);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.benefit-item{min-height:165px;padding:29px 30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;border-right:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)}
+.benefit-item:nth-child(even){border-right:0}
+.benefit-item:nth-last-child(-n+2){border-bottom:0}
+.benefit-item strong{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:3.9rem;line-height:.9;color:#fff;font-weight:700}
+.benefit-item span{margin-top:9px;text-transform:uppercase;font-size:.84rem;font-weight:700;letter-spacing:.035em}
+.current-update-link{display:inline-block;margin-top:22px;color:var(--green);font-size:.82rem;text-transform:uppercase;font-weight:700;letter-spacing:.055em;text-underline-offset:5px}
+
+/* About */
+.about-section{background:var(--offwhite);padding:76px 0}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:78px;align-items:center}
+.about-section h2{font-size:4rem;color:var(--green);margin:0 0 28px}
+.about-copy p{margin:0 0 18px}
+.about-copy a{color:var(--green);font-weight:700;text-underline-offset:4px}
+.about-logo-panel{background:var(--brand-black);min-height:360px;display:flex;align-items:center;justify-content:center;padding:48px}
+.about-logo-panel img{width:min(340px,82%)}
+
+/* Internal page hero */
+.page-hero{background:var(--green);color:#fff;padding:72px 0 62px}
+.page-hero h1{font-size:clamp(4.7rem,7vw,7.1rem);margin:0}
+.page-hero p{max-width:850px;font-size:1.04rem;margin:19px 0 0}
+
+/* Internal page layout */
 .section{padding:76px 0}
 .section-white{background:#fff}
 .section-warm{background:var(--warm)}
+.section-black{background:var(--brand-black);color:#fff}
 .section-green{background:var(--green);color:#fff}
-.section-black{background:var(--black);color:#fff}
-.split{display:grid;grid-template-columns:.84fr 1.16fr;gap:76px;align-items:start}
-.media-split{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center}
-.eyebrow{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;color:var(--green);font-weight:700;font-size:1.05rem;letter-spacing:.04em;margin:0 0 11px}
-.section-green .eyebrow,.section-black .eyebrow{color:var(--pale)}
-.section-title,.content-title{font-size:clamp(2.8rem,5vw,4.6rem);margin:0 0 22px}
-.lead{font-size:1.15rem;font-weight:700;line-height:1.55}
+.media-split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .prose p{margin:0 0 18px}
-.prose a.text-link{font-weight:700;color:var(--green);text-underline-offset:4px}
-
-/* Mirrors the original homepage's inline benefits artwork position */
-.benefits-graphic{background:var(--green);color:#fff;padding:34px;min-height:440px;display:flex;flex-direction:column;justify-content:space-between}
-.benefits-graphic .benefits-heading{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:2.6rem;line-height:.95;margin:0 0 26px}
-.benefits-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.35);border-left:1px solid rgba(255,255,255,.35)}
-.benefit{padding:22px 18px;border-right:1px solid rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.35);min-height:142px}
-.benefit strong{display:block;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:2.6rem;line-height:.95;color:var(--pale);margin-bottom:8px}
-.benefit span{font-size:.82rem;line-height:1.38}
-.update-link{margin-top:22px;display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--green)}
-.update-link:after{content:" →"}
-
-.about-image{background:var(--black);min-height:360px;display:flex;align-items:center;justify-content:center;padding:48px}
-.about-image img{width:min(320px,76%)}
-
-/* Site / proposal imagery */
+.lead{font-size:1.16rem;font-weight:700;line-height:1.55}
 .image-frame{background:var(--warm);padding:8px}
 .image-frame img{width:100%;height:auto}
-.caption{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:8px 3px 2px}
-.masterplan{margin:34px 0 56px}
-.masterplan .image-frame img{max-height:700px;object-fit:cover}
+.caption{font-size:.7rem;text-transform:uppercase;letter-spacing:.055em;color:var(--muted);padding:8px 3px 1px}
+.update-link{display:inline-block;margin-top:17px;color:var(--green);font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-underline-offset:4px}
+.masterplan{margin:0 0 58px}
+.masterplan .image-frame img{max-height:720px;object-fit:cover}
 
-/* Proposals — intentionally plain stacked sections like the original */
-.proposal-block{padding:46px 0;border-top:1px solid var(--line)}
+/* Proposal page */
+.proposal-block{padding:48px 0;border-top:1px solid var(--line)}
 .proposal-block:first-of-type{border-top:0;padding-top:0}
-.proposal-block h2{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:2.75rem;line-height:1;margin:0 0 17px}
-.proposal-block p{margin:0 0 15px}
-.current-note{margin-top:20px;border-left:5px solid var(--green);padding:12px 16px;background:#eef5f0;font-size:.88rem}
-.current-note strong{display:block;color:var(--green);text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;margin-bottom:2px}
+.proposal-block h2{font-size:3.15rem;color:var(--green);margin:0 0 18px}
+.proposal-block p{margin:0 0 16px}
+.current-note{margin-top:22px;background:#eef4f0;border-left:6px solid var(--green);padding:14px 17px;font-size:.9rem}
+.current-note strong{display:block;color:var(--green);text-transform:uppercase;font-size:.73rem;letter-spacing:.055em;margin-bottom:4px}
 
-/* September update page */
-.update-intro{display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start}
-.status-panel{background:var(--black);color:#fff;padding:28px;border-top:7px solid var(--pale)}
-.status-panel small{display:block;text-transform:uppercase;color:var(--pale);font-weight:700;letter-spacing:.07em}
-.status-panel strong{display:block;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:2.4rem;line-height:1;margin:10px 0}
-.issue-list{border-top:1px solid rgba(255,255,255,.2);margin-top:30px}
-.issue-row{display:grid;grid-template-columns:210px 1fr 200px;gap:28px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
-.issue-row h3{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.55rem;line-height:1;margin:0}
-.issue-row p{margin:0;color:rgba(255,255,255,.84);font-size:.93rem}
-.issue-row .result{background:var(--pale);color:var(--black);padding:8px 10px;font-size:.69rem;text-transform:uppercase;font-weight:700}
+/* Current position */
+.update-intro{display:grid;grid-template-columns:1fr 340px;gap:68px;align-items:start}
+.content-title,.section-title{font-size:4rem;color:var(--green);margin:0 0 24px}
+.section-black .section-title{color:#fff}
+.status-panel{background:var(--brand-black);color:#fff;padding:30px;border-top:8px solid var(--pale)}
+.status-panel small{display:block;text-transform:uppercase;color:var(--pale);font-size:.75rem;font-weight:700;letter-spacing:.06em}
+.status-panel strong{display:block;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:2.6rem;line-height:1;margin:12px 0}
+.issue-list{margin-top:30px;border-top:1px solid rgba(255,255,255,.2)}
+.issue-row{display:grid;grid-template-columns:215px 1fr 205px;gap:30px;padding:23px 0;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
+.issue-row h3{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.7rem;line-height:1;margin:0}
+.issue-row p{margin:0;color:rgba(255,255,255,.86);font-size:.92rem}
+.issue-row .result{background:var(--pale);color:var(--brand-black);padding:9px 10px;font-size:.68rem;font-weight:700;text-transform:uppercase}
 
 /* FAQ */
 .faq-group{margin-bottom:48px}
-.faq-group h2{font-size:2.55rem;margin:0 0 14px}
-.faq-item{background:#fff;border-top:1px solid var(--line)}
+.faq-group h2{font-size:3rem;color:var(--green);margin:0 0 15px}
+.faq-item{border-top:1px solid var(--line)}
 .faq-item:last-child{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;border:0;background:#fff;color:var(--black);text-align:left;font:700 .97rem/1.4 "Century Gothic",Arial,sans-serif;padding:19px 52px 19px 0;position:relative;cursor:pointer}
-.faq-q:after{content:"+";position:absolute;right:4px;top:10px;font:400 2rem Arial;color:var(--green)}
-.faq-item.open .faq-q:after{content:"–"}
-.faq-a{display:none;color:var(--muted);padding:0 54px 22px 0;font-size:.93rem}
+.faq-q{position:relative;width:100%;border:0;background:#fff;text-align:left;padding:20px 54px 20px 0;color:var(--brand-black);font:700 .98rem/1.4 "Century Gothic","CenturyGothic",Arial,sans-serif;cursor:pointer}
+.faq-q::after{content:"+";position:absolute;right:4px;top:10px;font:400 2rem/1 Arial;color:var(--green)}
+.faq-item.open .faq-q::after{content:"–"}
+.faq-a{display:none;color:var(--muted);font-size:.93rem;padding:0 54px 22px 0}
 .faq-item.open .faq-a{display:block}
 
-/* Footer — same sparse information hierarchy as original */
-.footer{background:var(--black);color:#fff;padding:42px 0 24px}
-.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:42px}
-.footer-title{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:1.8rem;line-height:1;text-transform:uppercase}
-.footer-nav{display:flex;gap:26px;flex-wrap:wrap}
-.footer-nav a{text-transform:uppercase;text-decoration:none;font-size:.75rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.82)}
-.footer-contact{text-align:right;font-size:.82rem;color:rgba(255,255,255,.78)}
+/* Footer */
+.footer{background:#000;color:#fff;padding:45px 0 22px}
+.footer-main{display:grid;grid-template-columns:1.25fr .8fr 1fr;gap:50px;align-items:start}
+.footer-brand{display:flex;align-items:center;gap:22px;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.3rem}
+.footer-brand img{width:150px}
+.footer-nav{display:flex;flex-direction:column;gap:9px}
+.footer-nav a{text-decoration:none;text-transform:uppercase;font-size:.75rem;font-weight:700;letter-spacing:.055em;color:rgba(255,255,255,.88)}
+.footer-contact{text-align:right;font-size:.8rem;color:rgba(255,255,255,.8)}
 .footer-contact a{text-decoration:none}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:.72rem;color:rgba(255,255,255,.5)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:17px;font-size:.7rem;color:rgba(255,255,255,.5)}
 
-/* Mobile */
+/* Tablet */
 @media(max-width:900px){
-  .split,.media-split,.update-intro{grid-template-columns:1fr;gap:34px}
-  .issue-row{grid-template-columns:170px 1fr}.issue-row .result{grid-column:2}
-  .footer-top{display:grid;grid-template-columns:1fr 1fr}
-  .footer-contact{text-align:left}
+  .site-title{gap:20px;font-size:1.45rem}.site-title::before{width:155px}
+  .main-nav{gap:22px}
+  .about-grid,.media-split,.update-intro{grid-template-columns:1fr;gap:38px}
+  .issue-row{grid-template-columns:180px 1fr}.issue-row .result{grid-column:2}
+  .footer-main{grid-template-columns:1fr 1fr}.footer-contact{text-align:left}
 }
+
+/* Mobile – based directly on the supplied original-site screenshot */
 @media(max-width:760px){
-  .container{width:calc(100% - 28px)}
-  .header-inner{height:72px;gap:14px}
-  .site-title{font-size:1.25rem;white-space:nowrap}
-  .menu-btn{display:block;min-height:42px}
-  .main-nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--black);padding:8px 18px 18px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 28px rgba(0,0,0,.25)}
+  .container{width:calc(100% - 48px)}
+  .site-header{position:sticky}
+  .header-inner{height:92px;gap:12px}
+  .site-title{gap:17px;font-size:1.45rem;min-width:0;flex:1}
+  .site-title::before{width:145px;height:46px}
+  .site-title span{display:inline}
+  .menu-btn{display:block;flex:none}
+  .main-nav{display:none;position:absolute;top:92px;left:0;right:0;background:#000;padding:8px 24px 20px;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid rgba(255,255,255,.12);box-shadow:0 18px 30px rgba(0,0,0,.25)}
   .main-nav.open{display:flex}
-  .main-nav a{padding:13px 3px;border-bottom:1px solid rgba(255,255,255,.12);font-size:.86rem}
-  .main-nav a.active{border-bottom:1px solid var(--pale)}
-  .hero{min-height:505px}
-  .hero>img{object-position:58% center}
-  .hero:after{background:linear-gradient(0deg,rgba(35,31,32,.93) 0%,rgba(35,31,32,.56) 52%,rgba(35,31,32,.12) 100%)}
-  .hero-content{padding:70px 0 42px}
-  .hero-kicker{font-size:1.15rem}
-  .hero h1{font-size:clamp(4.2rem,19vw,5.4rem)}
-  .hero p{font-size:.94rem;line-height:1.55;margin-top:18px}
-  .page-hero{padding:50px 0 42px}
-  .page-hero h1{font-size:clamp(3.1rem,14vw,4.3rem)}
+  .main-nav a{padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.15);font-size:.85rem}
+  .main-nav a.active{border-bottom-color:var(--pale)}
+  
+  .original-hero{min-height:560px}
+  .original-hero>img{object-position:54% center}
+  .original-hero::after{background:linear-gradient(180deg,rgba(0,0,0,.03) 0%,rgba(0,0,0,.08) 40%,rgba(0,0,0,.36) 100%)}
+  .hero-content{padding:0 0 68px}
+  .hero-kicker{font-size:1.55rem;line-height:1.02;margin-bottom:16px}
+  .hero h1{font-size:5.05rem;line-height:.86}
+  
+  .intro-band-inner{min-height:350px;padding:49px 0 39px}
+  .intro-band p{font-size:2.25rem;line-height:1.04}
+  .down-arrow{width:24px;height:24px;border-width:0 4px 4px 0;margin-top:28px}
+  
+  .welcome-section{padding:53px 0 62px}
+  .welcome-section h2{font-size:4.05rem;margin-bottom:30px}
+  .welcome-copy{font-size:.95rem}
+  .home-benefits{grid-template-columns:1fr;margin-top:42px}
+  .benefit-item{min-height:125px;border-right:0;border-bottom:1px solid rgba(255,255,255,.28);padding:22px 24px}
+  .benefit-item:nth-last-child(-n+2){border-bottom:1px solid rgba(255,255,255,.28)}
+  .benefit-item:last-child{border-bottom:0}
+  .benefit-item strong{font-size:3.35rem}
+  
+  .about-section{padding:57px 0}
+  .about-section h2{font-size:3.65rem}
+  .about-grid{gap:32px}
+  .about-copy{font-size:.94rem}
+  .about-logo-panel{min-height:240px;padding:32px}
+  
+  .page-hero{padding:52px 0 44px}
+  .page-hero h1{font-size:4.2rem}
   .page-hero p{font-size:.94rem}
-  .section{padding:50px 0}
-  .section-title,.content-title{font-size:clamp(2.6rem,12vw,3.55rem)}
+  .section{padding:52px 0}
   .lead{font-size:1.02rem}
   .prose p,.proposal-block p{font-size:.93rem}
-  .benefits-graphic{padding:24px;min-height:0}
-  .benefits-graphic .benefits-heading{font-size:2.25rem}
-  .benefit{min-height:118px;padding:18px 13px}
-  .benefit strong{font-size:2.2rem}
-  .benefit span{font-size:.74rem}
-  .about-image{min-height:240px;padding:34px}
-  .masterplan{margin:26px 0 40px}
-  .proposal-block{padding:34px 0}
-  .proposal-block h2{font-size:2.35rem}
-  .issue-row{grid-template-columns:1fr;gap:9px;padding:18px 0}
+  .proposal-block{padding:36px 0}
+  .proposal-block h2{font-size:2.55rem}
+  .content-title,.section-title{font-size:3.25rem}
+  .issue-row{grid-template-columns:1fr;gap:10px;padding:19px 0}
   .issue-row .result{grid-column:auto;justify-self:start}
-  .faq-group{margin-bottom:38px}
-  .faq-group h2{font-size:2.2rem}
-  .faq-q{font-size:.9rem;padding:17px 44px 17px 0}
-  .faq-a{padding:0 20px 20px 0;font-size:.88rem}
-  .footer-top{grid-template-columns:1fr;gap:24px}
+  .faq-group h2{font-size:2.55rem}
+  .faq-q{font-size:.9rem;padding:18px 46px 18px 0}
+  .faq-a{font-size:.88rem;padding:0 18px 20px 0}
+  
+  .footer-main{grid-template-columns:1fr;gap:26px}
+  .footer-brand{font-size:1.2rem}
+  .footer-brand img{width:145px}
   .footer-contact{text-align:left}
-  .footer-nav{gap:18px}
-  .footer-bottom{flex-direction:column;gap:7px}
 }
-@media(max-width:480px){
-  .site-title{font-size:1.1rem}
-  .hero h1{font-size:4rem}
-  .benefits-grid{grid-template-columns:1fr}
-  .benefit{min-height:auto}
+@media(max-width:520px){
+  .container{width:calc(100% - 46px)}
+  .site-title{font-size:1.26rem;gap:15px}
+  .site-title::before{width:132px}
+  .original-hero{min-height:555px}
+  .hero-kicker{font-size:1.38rem}
+  .hero h1{font-size:4.65rem}
+  .intro-band p{font-size:2.05rem}
+  .welcome-section h2{font-size:3.8rem}
+}
+@media(max-width:390px){
+  .site-title{font-size:1.08rem;gap:11px}
+  .site-title::before{width:116px}
+  .menu-btn{width:40px}
+  .hero-kicker{font-size:1.22rem}
+  .hero h1{font-size:4.1rem}
+  .intro-band p{font-size:1.8rem}
 }
