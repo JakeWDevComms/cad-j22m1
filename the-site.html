@@ -8,7 +8,7 @@
       <span>Application boundary</span>
       <a href="https://caddickj22m1.co.uk/wp-content/uploads/2025/06/Site-location-plan.pdf" target="_blank" rel="noopener">View submitted Site Location Plan ↗</a>
     </div>
-    <p class="site-map-note">Boundary reproduced for website mapping from the submitted Site Location Plan. Please refer to the submitted plan for the formal application boundary.</p>
+    <p class="site-map-note">Boundary mapped to reflect the planning application boundary shown in the supplied mapping reference. Please refer to the submitted Site Location Plan for the formal application boundary.</p>
   </div></div></section>
 </main>
 <footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/caddick-logo-official.svg" alt="Caddick"><span>J22 M1 Employment Hub</span></div><nav class="footer-nav"><a href="/">Home</a><a href="/the-site">Site</a><a href="/the-application">Proposals</a><a href="/faq">FAQ</a></nav><div class="footer-contact">0800 080 3172<br><a href="mailto:caddickj22m1@devcomms.co.uk">caddickj22m1@devcomms.co.uk</a><br>Freepost DEVCOMMS</div></div><div class="container footer-bottom"><span>© 2026 All rights Reserved. Design by Devcomms</span></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
@@ -26,36 +26,42 @@
   const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  });
 
   const aerial = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19,
     attribution: 'Tiles &copy; Esri'
-  });
+  }).addTo(map);
 
   const boundary = [
-    [52.69560, -1.29200],
-    [52.69564, -1.28960],
-    [52.69584, -1.28735],
-    [52.69650, -1.28650],
-    [52.69815, -1.28640],
-    [52.69990, -1.28658],
-    [52.70155, -1.28700],
-    [52.70282, -1.28812],
-    [52.70318, -1.28970],
-    [52.70292, -1.29105],
-    [52.70180, -1.29170],
-    [52.70005, -1.29200],
-    [52.69815, -1.29220],
-    [52.69655, -1.29215]
+    [52.703336, -1.289646],
+    [52.702561, -1.291006],
+    [52.698019, -1.291359],
+    [52.696057, -1.289847],
+    [52.695258, -1.290754],
+    [52.693841, -1.290485],
+    [52.694980, -1.289058],
+    [52.695997, -1.289243],
+    [52.695234, -1.283214],
+    [52.696530, -1.283617],
+    [52.696154, -1.284994],
+    [52.697995, -1.286102],
+    [52.700502, -1.284776],
+    [52.700696, -1.283415],
+    [52.700732, -1.285028],
+    [52.702028, -1.285179],
+    [52.701701, -1.286472],
+    [52.701277, -1.285716],
+    [52.701447, -1.287580],
+    [52.702936, -1.288470]
   ];
 
   const boundaryLayer = L.polygon(boundary, {
     color: '#d71920',
     weight: 4,
     opacity: 1,
-    fillColor: '#d71920',
-    fillOpacity: 0.10
+    fillColor: '#17254f',
+    fillOpacity: 0.28
   }).addTo(map);
 
   boundaryLayer.bindPopup('<strong>J22 M1 Employment Hub</strong><br>Application boundary');
