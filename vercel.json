@@ -3,6 +3,10 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {"source": "/site", "destination": "/the-site", "permanent": true},
+    {"source": "/proposals", "destination": "/the-application", "permanent": true}
+  ],
   "headers": [
     {
       "source": "/(.*)",
