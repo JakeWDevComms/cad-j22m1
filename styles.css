@@ -1612,3 +1612,40 @@ a.contact-card:focus{
     font-size:2rem;
   }
 }
+
+
+/* Planning Portal links */
+.status-panel-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+  padding:10px 14px;
+  border:1px solid currentColor;
+  color:inherit;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.82rem;
+  font-weight:700;
+  line-height:1.35;
+  text-decoration:none;
+}
+.status-panel-link:hover,
+.status-panel-link:focus{
+  background:#febd11;
+  border-color:#febd11;
+  color:#231f20;
+}
+.contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+@media(max-width:767px){
+  .contact-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .contact-actions .source-button{
+    width:100%;
+  }
+}
