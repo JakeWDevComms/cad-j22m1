@@ -1142,3 +1142,85 @@ a.contact-card:focus{
     gap:12px 16px;
   }
 }
+
+
+/* September 2026 refinements */
+:root{
+  --brand-black:#231f20;
+  --green:#1e5a4a;
+  --brand-green:#1e5a4a;
+  --pale:#acd6bb;
+  --yellow:#febd11;
+  --warm:#edece5;
+}
+
+/* Keep the green scheme explicit across all key branded sections. */
+.intro-band,
+.page-hero,
+.section-green,
+.home-benefits{
+  background:#1e5a4a;
+}
+.about-section h2,
+.welcome-section h2,
+.proposal-block h2,
+.faq-group h2,
+.content-title,
+.section-title,
+.current-update-link,
+.update-link{
+  color:#1e5a4a;
+}
+.main-nav a.active{
+  color:var(--pale);
+}
+.current-note{
+  border-left-color:#1e5a4a;
+}
+
+/* The original header title is effectively one continuous lock-up; remove the flex gap between M1 and EMPLOYMENT. */
+.site-title{
+  gap:0;
+}
+.site-title::before{
+  margin-right:28px;
+}
+.site-title span{
+  margin-left:.18em;
+}
+
+/* Pan the homepage hero slightly to the right so more of the employment units are visible. */
+.original-hero>img{
+  object-position:55% 45%;
+}
+
+@media(max-width:900px){
+  .site-title::before{margin-right:20px}
+}
+
+@media(max-width:760px){
+  .site-title{
+    gap:0;
+  }
+  .site-title::before{
+    margin-right:10px;
+  }
+  .site-title span{
+    margin-left:.15em;
+  }
+  .original-hero>img{
+    object-position:60% center;
+  }
+
+  /* Six public pages now sit in the mobile menu; retain source-site row sizing. */
+  .main-nav a{
+    min-height:40px;
+    padding:10px 20px;
+    font-size:1.2rem;
+    line-height:20px;
+  }
+  .main-nav a.active{
+    background:#1e5a4a;
+    color:#fff;
+  }
+}
