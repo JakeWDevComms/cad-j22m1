@@ -1224,3 +1224,306 @@ a.contact-card:focus{
     color:#fff;
   }
 }
+
+
+/* Site page restructure – source-site sizing with Caddick brand colours */
+.site-source-shell{
+  width:min(1140px,calc(100% - 80px));
+  margin:0 auto;
+}
+.site-location-section{
+  background:#fff;
+  padding:40px 0 32px;
+}
+.site-location-copy{
+  max-width:900px;
+}
+.site-location-copy .lead{
+  margin:0 0 18px;
+  font-size:1.08rem;
+  font-weight:700;
+  line-height:1.6;
+}
+.site-location-copy p{
+  margin:0 0 18px;
+}
+
+.site-map-section{
+  background:#fff;
+  padding:8px 0 50px;
+}
+.site-map-section .site-boundary-map{
+  height:560px;
+}
+.site-map-section .site-map-meta{
+  padding-top:12px;
+}
+.site-map-section .site-map-note{
+  max-width:900px;
+}
+
+.planning-context-section{
+  background:#edece5;
+  padding:40px 0 50px;
+}
+.planning-context-copy{
+  max-width:900px;
+}
+.planning-context-copy h2{
+  margin:0 0 22px;
+  color:#1e5a4a;
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+  font-size:3rem;
+  font-weight:700;
+  line-height:.95;
+  text-transform:uppercase;
+}
+.planning-context-copy p{
+  margin:0 0 18px;
+}
+.planning-context-end{
+  max-width:900px;
+  margin-top:38px;
+  display:grid;
+  gap:24px;
+}
+.planning-allocation-card{
+  padding:34px 38px 30px;
+  border:1px solid #acd6bb;
+  background:#edece5;
+}
+.planning-allocation-card strong{
+  display:block;
+  margin:0 0 8px;
+  color:#1e5a4a;
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+  font-size:4.2rem;
+  font-weight:700;
+  line-height:.9;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+}
+.planning-allocation-card span{
+  display:block;
+  color:#231f20;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  line-height:1.35;
+  text-transform:uppercase;
+}
+.planning-allocation-card small{
+  display:block;
+  margin-top:10px;
+  color:#686365;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.9rem;
+}
+
+.planning-document-card{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr) auto;
+  align-items:center;
+  gap:20px;
+  min-height:132px;
+  padding:26px 30px;
+  border:1px solid #acd6bb;
+  background:#fff;
+  color:#231f20;
+  text-decoration:none;
+}
+.planning-document-card:hover,
+.planning-document-card:focus{
+  border-color:#1e5a4a;
+}
+.planning-document-icon{
+  width:30px;
+  height:30px;
+  color:#1e5a4a;
+}
+.planning-document-icon svg{
+  width:100%;
+  height:100%;
+}
+.planning-document-copy{
+  min-width:0;
+}
+.planning-document-copy strong{
+  display:block;
+  margin-bottom:5px;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:1rem;
+  line-height:1.45;
+}
+.planning-document-copy small{
+  display:block;
+  color:#686365;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.85rem;
+  line-height:1.45;
+}
+.planning-document-action{
+  white-space:nowrap;
+  color:#1e5a4a;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:.92rem;
+  font-weight:700;
+}
+
+.site-next-section{
+  background:#fff;
+  padding:50px 0;
+}
+.site-next-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  min-width:280px;
+  min-height:54px;
+  padding:14px 22px;
+  border:1px solid #1e5a4a;
+  background:#1e5a4a;
+  color:#fff;
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+  font-size:1rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.site-next-button span{
+  font-size:1.8rem;
+  font-weight:400;
+  line-height:1;
+}
+.site-next-button:hover,
+.site-next-button:focus{
+  border-color:#febd11;
+  background:#febd11;
+  color:#231f20;
+}
+
+@media(max-width:1024px){
+  .site-source-shell{
+    width:calc(100% - 70px);
+  }
+  .site-location-section{
+    padding:35px 0 28px;
+  }
+  .site-map-section{
+    padding:7px 0 45px;
+  }
+  .site-map-section .site-boundary-map{
+    height:500px;
+  }
+  .planning-context-section{
+    padding:35px 0 45px;
+  }
+  .planning-context-copy h2{
+    font-size:2.3rem;
+  }
+  .planning-context-end{
+    margin-top:30px;
+  }
+  .planning-allocation-card{
+    padding:30px;
+  }
+  .planning-allocation-card strong{
+    font-size:3.4rem;
+  }
+  .planning-document-card{
+    padding:24px 26px;
+  }
+  .site-next-section{
+    padding:45px 0;
+  }
+}
+
+@media(max-width:767px){
+  .site-source-shell{
+    width:calc(100% - 50px);
+  }
+  .site-location-section{
+    padding:25px 0 20px;
+  }
+  .site-location-copy .lead{
+    font-size:1rem;
+  }
+  .site-location-copy p{
+    margin-bottom:16px;
+  }
+
+  .site-map-section{
+    padding:5px 0 35px;
+  }
+  .site-map-section .site-boundary-map{
+    height:420px;
+  }
+
+  .planning-context-section{
+    padding:25px 0 35px;
+  }
+  .planning-context-copy h2{
+    margin-bottom:18px;
+    font-size:2rem;
+  }
+  .planning-context-copy p{
+    margin-bottom:16px;
+  }
+  .planning-context-end{
+    margin-top:26px;
+    gap:20px;
+  }
+  .planning-allocation-card{
+    padding:25px;
+  }
+  .planning-allocation-card strong{
+    font-size:3rem;
+  }
+  .planning-allocation-card span{
+    font-size:.86rem;
+    letter-spacing:.06em;
+  }
+  .planning-allocation-card small{
+    font-size:.84rem;
+  }
+
+  .planning-document-card{
+    grid-template-columns:34px minmax(0,1fr);
+    gap:16px;
+    min-height:0;
+    padding:22px 20px;
+  }
+  .planning-document-icon{
+    width:26px;
+    height:26px;
+  }
+  .planning-document-copy strong{
+    font-size:.94rem;
+  }
+  .planning-document-copy small{
+    font-size:.8rem;
+  }
+  .planning-document-action{
+    grid-column:2;
+    white-space:normal;
+    font-size:.88rem;
+  }
+
+  .site-next-section{
+    padding:35px 0;
+  }
+  .site-next-button{
+    width:100%;
+    min-width:0;
+    min-height:52px;
+    padding:13px 18px;
+    font-size:.96rem;
+  }
+}
+
+@media(max-width:420px){
+  .site-map-section .site-boundary-map{
+    height:390px;
+  }
+}
