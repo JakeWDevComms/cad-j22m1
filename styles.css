@@ -1186,7 +1186,7 @@ a.contact-card:focus{
   margin-right:28px;
 }
 .site-title span{
-  margin-left:.18em;
+  margin-left:.06em;
 }
 
 /* Pan the homepage hero slightly to the right so more of the employment units are visible. */
@@ -1206,7 +1206,7 @@ a.contact-card:focus{
     margin-right:10px;
   }
   .site-title span{
-    margin-left:.15em;
+    margin-left:.06em;
   }
   .original-hero>img{
     object-position:60% center;
