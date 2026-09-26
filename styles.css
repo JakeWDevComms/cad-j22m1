@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap");
+
 :root{
   --black:#000000;
   --brand-black:#231f20;
@@ -14,7 +16,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--text);font-family:"Century Gothic","CenturyGothic",Arial,Helvetica,sans-serif;line-height:1.62;overflow-x:hidden}
+body{margin:0;background:#fff;color:var(--text);font-family:"Montserrat",Arial,Helvetica,sans-serif;line-height:1.62;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
 .container{width:min(var(--max),calc(100% - 48px));margin:0 auto}
@@ -22,7 +24,7 @@ a{color:inherit}
 /* Header */
 .site-header{position:sticky;top:0;z-index:100;background:#000;color:#fff}
 .header-inner{height:96px;display:flex;align-items:center;justify-content:space-between;gap:34px}
-.site-title{display:flex;align-items:center;gap:28px;text-decoration:none;color:#fff;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:1.7rem;line-height:1;text-transform:uppercase;font-weight:700;letter-spacing:.015em;white-space:nowrap}
+.site-title{display:flex;align-items:center;gap:28px;text-decoration:none;color:#fff;font-family:"League Gothic","Arial Narrow",Arial,sans-serif;font-size:1.7rem;line-height:1;text-transform:uppercase;font-weight:700;letter-spacing:.015em;white-space:nowrap}
 .site-title::before{content:"";display:block;width:190px;height:54px;background:url("assets/caddick-logo-white.png") left center/contain no-repeat;flex:none}
 .site-title span{color:#fff}
 .main-nav{display:flex;align-items:center;gap:34px}
@@ -37,19 +39,19 @@ a{color:inherit}
 .original-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.82)}
 .original-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.14) 43%,rgba(0,0,0,.47) 100%)}
 .hero-content{position:relative;z-index:2;padding:90px 0 76px}
-.hero-kicker{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:2.05rem;line-height:1;color:#fff;letter-spacing:.008em;margin-bottom:18px}
-.hero h1{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(6rem,10vw,9.6rem);line-height:.82;letter-spacing:0;margin:0;color:#fff}
+.hero-kicker{font-family:"League Gothic","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:2.05rem;line-height:1;color:#fff;letter-spacing:.008em;margin-bottom:18px}
+.hero h1{font-family:"League Gothic","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(6rem,10vw,9.6rem);line-height:.82;letter-spacing:0;margin:0;color:#fff}
 
 /* The green statement band visible on the original */
 .intro-band{background:var(--green);color:#fff}
 .intro-band-inner{min-height:395px;padding:68px 0 46px;display:flex;flex-direction:column;justify-content:space-between}
-.intro-band p{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(2rem,3.2vw,3.25rem);line-height:1.03;letter-spacing:.006em;margin:0;max-width:1060px}
+.intro-band p{font-family:"League Gothic","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-weight:700;font-size:clamp(2rem,3.2vw,3.25rem);line-height:1.03;letter-spacing:.006em;margin:0;max-width:1060px}
 .down-arrow{display:block;width:31px;height:31px;border-right:5px solid #fff;border-bottom:5px solid #fff;transform:rotate(45deg);margin:30px auto 4px}
 
 /* Welcome */
 .welcome-section{background:#fff;padding:68px 0 82px;text-align:center}
 .welcome-section h2,.about-section h2,.page-hero h1,.proposal-block h2,.faq-group h2,.section-title,.content-title{
-  font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;
+  font-family:"League Gothic","Arial Narrow",Arial,sans-serif;
   text-transform:uppercase;font-weight:700;letter-spacing:0;line-height:.94
 }
 .welcome-section h2{font-size:4.6rem;color:var(--green);margin:0 0 38px}
@@ -59,7 +61,7 @@ a{color:inherit}
 .benefit-item{min-height:165px;padding:29px 30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;border-right:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)}
 .benefit-item:nth-child(even){border-right:0}
 .benefit-item:nth-last-child(-n+2){border-bottom:0}
-.benefit-item strong{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:3.9rem;line-height:.9;color:#fff;font-weight:700}
+.benefit-item strong{font-family:"League Gothic","Arial Narrow",Arial,sans-serif;font-size:3.9rem;line-height:.9;color:#fff;font-weight:700}
 .benefit-item span{margin-top:9px;text-transform:uppercase;font-size:.84rem;font-weight:700;letter-spacing:.035em}
 .current-update-link{display:inline-block;margin-top:22px;color:var(--green);font-size:.82rem;text-transform:uppercase;font-weight:700;letter-spacing:.055em;text-underline-offset:5px}
 
@@ -107,10 +109,10 @@ a{color:inherit}
 .section-black .section-title{color:#fff}
 .status-panel{background:var(--brand-black);color:#fff;padding:30px;border-top:8px solid var(--pale)}
 .status-panel small{display:block;text-transform:uppercase;color:var(--pale);font-size:.75rem;font-weight:700;letter-spacing:.06em}
-.status-panel strong{display:block;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;font-size:2.6rem;line-height:1;margin:12px 0}
+.status-panel strong{display:block;font-family:"League Gothic","Arial Narrow",Arial,sans-serif;font-size:2.6rem;line-height:1;margin:12px 0}
 .issue-list{margin-top:30px;border-top:1px solid rgba(255,255,255,.2)}
 .issue-row{display:grid;grid-template-columns:215px 1fr 205px;gap:30px;padding:23px 0;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
-.issue-row h3{font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.7rem;line-height:1;margin:0}
+.issue-row h3{font-family:"League Gothic","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.7rem;line-height:1;margin:0}
 .issue-row p{margin:0;color:rgba(255,255,255,.86);font-size:.92rem}
 .issue-row .result{background:var(--pale);color:var(--brand-black);padding:9px 10px;font-size:.68rem;font-weight:700;text-transform:uppercase}
 
@@ -119,7 +121,7 @@ a{color:inherit}
 .faq-group h2{font-size:3rem;color:var(--green);margin:0 0 15px}
 .faq-item{border-top:1px solid var(--line)}
 .faq-item:last-child{border-bottom:1px solid var(--line)}
-.faq-q{position:relative;width:100%;border:0;background:#fff;text-align:left;padding:20px 54px 20px 0;color:var(--brand-black);font:700 .98rem/1.4 "Century Gothic","CenturyGothic",Arial,sans-serif;cursor:pointer}
+.faq-q{position:relative;width:100%;border:0;background:#fff;text-align:left;padding:20px 54px 20px 0;color:var(--brand-black);font:700 .98rem/1.4 "Montserrat",Arial,sans-serif;cursor:pointer}
 .faq-q::after{content:"+";position:absolute;right:4px;top:10px;font:400 2rem/1 Arial;color:var(--green)}
 .faq-item.open .faq-q::after{content:"–"}
 .faq-a{display:none;color:var(--muted);font-size:.93rem;padding:0 54px 22px 0}
@@ -128,7 +130,7 @@ a{color:inherit}
 /* Footer */
 .footer{background:#000;color:#fff;padding:45px 0 22px}
 .footer-main{display:grid;grid-template-columns:1.25fr .8fr 1fr;gap:50px;align-items:start}
-.footer-brand{display:flex;align-items:center;gap:22px;font-family:"Alternate Gothic No. 2","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.3rem}
+.footer-brand{display:flex;align-items:center;gap:22px;font-family:"League Gothic","Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:1.3rem}
 .footer-brand img{width:150px}
 .footer-nav{display:flex;flex-direction:column;gap:9px}
 .footer-nav a{text-decoration:none;text-transform:uppercase;font-size:.75rem;font-weight:700;letter-spacing:.055em;color:rgba(255,255,255,.88)}
