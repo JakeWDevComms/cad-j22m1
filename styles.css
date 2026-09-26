@@ -664,3 +664,136 @@ a{color:inherit}
     font-size:clamp(.96rem,4.15vw,1.08rem);
   }
 }
+
+
+/* Exact original Caddick site typography and mobile header/nav values */
+@font-face{
+  font-family:'Century Gothic';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('https://caddickj22m1.co.uk/wp-content/uploads/2025/02/centurygothic.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Century Gothic';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('https://caddickj22m1.co.uk/wp-content/uploads/2025/02/centurygothic_bold.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Alternative Gothic';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('https://caddickj22m1.co.uk/wp-content/uploads/2025/06/Alternate-Gothic-No.2-BT.ttf') format('truetype');
+}
+
+body{
+  font-family:'Century Gothic','Montserrat',Arial,Helvetica,sans-serif;
+}
+.site-title,
+.hero-kicker,
+.hero h1,
+.intro-band p,
+.welcome-section h2,
+.about-section h2,
+.page-hero h1,
+.proposal-block h2,
+.faq-group h2,
+.section-title,
+.content-title,
+.benefit-item strong,
+.footer-brand,
+.status-panel strong,
+.issue-row h3,
+.main-nav a{
+  font-family:'Alternative Gothic','League Gothic','Arial Narrow',Arial,sans-serif;
+}
+
+/* Source values from original Elementor header template (post-102.css) */
+@media(max-width:767px){
+  .header-inner{
+    width:100%;
+    max-width:none;
+    height:auto;
+    min-height:0;
+    margin:0;
+    padding:10px 25px;
+    gap:10px;
+  }
+
+  .site-title{
+    flex:1 1 auto;
+    gap:10px;
+    font-size:1.3rem;
+    line-height:1;
+    overflow:visible;
+    white-space:nowrap;
+  }
+
+  .site-title::before{
+    width:83px;
+    height:18px;
+    flex:0 0 83px;
+    background-size:contain;
+  }
+
+  .site-title span{
+    overflow:visible;
+  }
+
+  .menu-btn{
+    width:33px;
+    height:33px;
+    flex:0 0 33px;
+    padding:5.5px;
+  }
+  .menu-btn span{
+    left:5.5px;
+    right:5.5px;
+    height:3px;
+    margin:0;
+  }
+  .menu-btn span:nth-child(1){top:7px}
+  .menu-btn span:nth-child(2){top:15px}
+  .menu-btn span:nth-child(3){top:23px}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){top:15px}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){top:15px}
+
+  .main-nav{
+    top:100%;
+    left:0;
+    right:0;
+    width:100vw;
+    transform:none;
+    margin:0;
+    padding:0;
+    gap:0;
+    background:#FEBD11;
+  }
+
+  .main-nav a{
+    min-height:40px;
+    padding:10px 20px;
+    background:#FEBD11;
+    color:#000;
+    font-size:1.2rem;
+    font-weight:500;
+    line-height:20px;
+    letter-spacing:0;
+    border:0 !important;
+  }
+
+  .main-nav a:hover,
+  .main-nav a:focus,
+  .main-nav a:active{
+    background:#000;
+    color:#fff;
+  }
+
+  .main-nav a.active{
+    background:#1E5A4A;
+    color:#fff;
+  }
+}
