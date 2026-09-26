@@ -486,3 +486,93 @@ a{color:inherit}
   .masterplan-link .image-frame{width:100%;max-width:100%;overflow:hidden}
   .masterplan-link img{width:100%;height:auto;object-fit:contain}
 }
+
+
+/* Mobile navigation – match original Caddick menu */
+@media(max-width:760px){
+  .site-header{overflow:visible}
+  .header-inner{position:relative}
+
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:50%;
+    right:auto;
+    width:100vw;
+    transform:translateX(-50%);
+    padding:0;
+    margin:0;
+    gap:0;
+    background:#febd11;
+    border:0;
+    box-shadow:none;
+    flex-direction:column;
+    align-items:stretch;
+    z-index:120;
+  }
+  .main-nav.open{display:flex}
+
+  .main-nav a{
+    display:flex;
+    align-items:center;
+    width:100%;
+    min-height:70px;
+    padding:14px 36px;
+    margin:0;
+    border:0 !important;
+    background:#febd11;
+    color:#231f20;
+    font-family:"League Gothic","Arial Narrow",Arial,sans-serif;
+    font-size:2rem;
+    font-weight:400;
+    line-height:1;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  .main-nav a:hover,
+  .main-nav a:focus,
+  .main-nav a:active{
+    background:#f4b410;
+    color:#231f20;
+  }
+  .main-nav a.active{
+    background:#1e5a4a;
+    color:#fff;
+  }
+
+  .menu-btn{
+    position:relative;
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    padding:4px;
+  }
+  .menu-btn span{
+    position:absolute;
+    left:6px;
+    right:6px;
+    height:4px;
+    margin:0;
+    background:#fff;
+    border-radius:4px;
+    transition:transform .2s ease, opacity .2s ease, top .2s ease;
+    transform-origin:center;
+  }
+  .menu-btn span:nth-child(1){top:10px}
+  .menu-btn span:nth-child(2){top:19px}
+  .menu-btn span:nth-child(3){top:28px}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){top:19px;transform:rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){top:19px;transform:rotate(-45deg)}
+}
+
+@media(max-width:420px){
+  .main-nav a{
+    min-height:68px;
+    padding-left:30px;
+    padding-right:30px;
+    font-size:1.9rem;
+  }
+}
