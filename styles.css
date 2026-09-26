@@ -651,3 +651,16 @@ a{color:inherit}
     font-size:1.36rem;
   }
 }
+
+
+/* Slightly increase mobile project title in header */
+@media(max-width:760px){
+  .site-title{
+    font-size:clamp(1.03rem,4.4vw,1.2rem);
+  }
+}
+@media(max-width:420px){
+  .site-title{
+    font-size:clamp(.96rem,4.15vw,1.08rem);
+  }
+}
