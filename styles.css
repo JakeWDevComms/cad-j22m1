@@ -401,3 +401,15 @@ a{color:inherit}
   .hero h1{font-size:3.25rem}
   .intro-band p{font-size:1.4rem}
 }
+
+
+.site-boundary-link{display:block;text-decoration:none;color:inherit}
+.site-boundary-link .image-frame{transition:transform .2s ease,box-shadow .2s ease}
+.site-boundary-link:hover .image-frame{transform:translateY(-2px);box-shadow:0 12px 28px rgba(35,31,32,.12)}
+.site-boundary-link img{width:100%;height:auto}
+@media(max-width:760px){
+  .site-boundary-wrap{width:100%;max-width:100%}
+  .site-boundary-link{width:100%;max-width:100%}
+  .site-boundary-link .image-frame{width:100%;max-width:100%;overflow:hidden}
+  .site-boundary-link .caption{font-size:.66rem;line-height:1.35}
+}
