@@ -1819,3 +1819,30 @@ a[x-apple-data-detectors],
     margin-right:auto;
   }
 }
+
+
+/* Keep all public-facing text comfortably inset from the viewport edge. */
+main .container,
+main .source-shell,
+main .site-source-shell,
+.footer .container{
+  box-sizing:border-box;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(min-width:768px){
+  main .container,
+  main .source-shell,
+  main .site-source-shell,
+  .footer .container{
+    width:min(1140px,calc(100% - 96px));
+  }
+}
+@media(max-width:767px){
+  main .container,
+  main .source-shell,
+  main .site-source-shell,
+  .footer .container{
+    width:calc(100% - 50px);
+  }
+}
