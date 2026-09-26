@@ -475,3 +475,14 @@ a{color:inherit}
 @media(max-width:420px){
   .site-boundary-map{height:390px}
 }
+
+
+.masterplan-link{display:block;text-decoration:none;color:inherit}
+.masterplan-link .image-frame{transition:transform .2s ease,box-shadow .2s ease}
+.masterplan-link:hover .image-frame{transform:translateY(-2px);box-shadow:0 14px 30px rgba(35,31,32,.12)}
+.masterplan-link img{width:100%;height:auto}
+@media(max-width:760px){
+  .masterplan-link{width:100%;max-width:100%}
+  .masterplan-link .image-frame{width:100%;max-width:100%;overflow:hidden}
+  .masterplan-link img{width:100%;height:auto;object-fit:contain}
+}
