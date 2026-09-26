@@ -1766,10 +1766,10 @@ a[x-apple-data-detectors],
 
 /* Tighten gap between Proposals intro and planning status strip */
 .page-hero + .proposal-current-position{
-  margin-top:-18px;
+  margin-top:-30px;
 }
 @media(max-width:767px){
   .page-hero + .proposal-current-position{
-    margin-top:-12px;
+    margin-top:-20px;
   }
 }
