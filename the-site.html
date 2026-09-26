@@ -8,7 +8,7 @@
       <span>Application boundary</span>
       <a href="https://caddickj22m1.co.uk/wp-content/uploads/2025/06/Site-location-plan.pdf" target="_blank" rel="noopener">View submitted Site Location Plan ↗</a>
     </div>
-    <p class="site-map-note">Boundary mapped to reflect the main application site north of the A50 shown in the supplied mapping reference. Please refer to the submitted Site Location Plan for the formal application boundary.</p>
+    <p class="site-map-note">Boundary aligned against the aerial and road mapping to reflect the main application site north of the A50. Please refer to the submitted Site Location Plan for the formal application boundary.</p>
   </div></div></section>
 </main>
 <footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/caddick-logo-official.svg" alt="Caddick"><span>J22 M1 Employment Hub</span></div><nav class="footer-nav"><a href="/">Home</a><a href="/the-site">Site</a><a href="/the-application">Proposals</a><a href="/faq">FAQ</a></nav><div class="footer-contact">0800 080 3172<br><a href="mailto:caddickj22m1@devcomms.co.uk">caddickj22m1@devcomms.co.uk</a><br>Freepost DEVCOMMS</div></div><div class="container footer-bottom"><span>© 2026 All rights Reserved. Design by Devcomms</span></div></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
@@ -34,23 +34,46 @@
   }).addTo(map);
 
   const boundary = [
-    [52.703336, -1.289646],
-    [52.702561, -1.291006],
-    [52.698019, -1.291359],
-    [52.696057, -1.289847],
-    [52.695997, -1.289243],
-    [52.695234, -1.283214],
-    [52.696530, -1.283617],
-    [52.696154, -1.284994],
-    [52.697995, -1.286102],
-    [52.700502, -1.284776],
-    [52.700696, -1.283415],
-    [52.700732, -1.285028],
-    [52.702028, -1.285179],
-    [52.701701, -1.286472],
-    [52.701277, -1.285716],
-    [52.701447, -1.287580],
-    [52.702936, -1.288470]
+    // North-west corner and western edge, aligned to the field/road edge beside the M1
+    [52.70328, -1.28955],
+    [52.70282, -1.29012],
+    [52.70222, -1.29068],
+    [52.70145, -1.29102],
+    [52.70055, -1.29118],
+    [52.69955, -1.29128],
+    [52.69855, -1.29128],
+    [52.69755, -1.29120],
+    [52.69672, -1.29104],
+    [52.69612, -1.29066],
+
+    // Southern edge following the north side of the A50
+    [52.69586, -1.28955],
+    [52.69572, -1.28838],
+    [52.69558, -1.28720],
+    [52.69542, -1.28602],
+    [52.69527, -1.28478],
+    [52.69514, -1.28355],
+
+    // South-east return and eastern field / road edge
+    [52.69556, -1.28308],
+    [52.69602, -1.28318],
+    [52.69652, -1.28348],
+    [52.69704, -1.28382],
+    [52.69756, -1.28418],
+    [52.69808, -1.28446],
+    [52.69872, -1.28455],
+    [52.69934, -1.28458],
+    [52.69992, -1.28452],
+    [52.70046, -1.28464],
+    [52.70088, -1.28503],
+    [52.70120, -1.28552],
+    [52.70148, -1.28612],
+    [52.70178, -1.28678],
+
+    // Northern return along the field boundaries / Old House Lane side
+    [52.70210, -1.28732],
+    [52.70248, -1.28786],
+    [52.70288, -1.28840]
   ];
 
   const boundaryLayer = L.polygon(boundary, {
@@ -58,7 +81,7 @@
     weight: 4,
     opacity: 1,
     fillColor: '#17254f',
-    fillOpacity: 0.28
+    fillOpacity: 0.18
   }).addTo(map);
 
   boundaryLayer.bindPopup('<strong>J22 M1 Employment Hub</strong><br>Application boundary');
